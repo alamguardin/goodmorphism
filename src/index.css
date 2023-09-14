@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
+
+/* General styles */
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: url('https://products.ls.graphics/mesh-gradients/images/33.-Beauty-Bush.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Manrope', sans-serif;
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Navbar styles */
+.heading {
+	width: 100%;
+	margin: 1.75em 0;
+}
+
+.heading__navbar {
+	max-width: 1120px;
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.heading__logo {
+	font-size: 1.125em;
+	color: #F1F6F9;
+	font-weight: 600;
+}
+
+.heading__author-name {
+	font-size: 0.875em;
+	font-weight: 600;
+	color: #212A3E;
+}
+
+.heading__author-name a {
+	text-decoration: underline;
+	color: #212A3E;
+}
+
+.heading__link svg {
+	fill: #212A3E;
+}

@@ -1,9 +1,10 @@
 import './App.css'
+import Sidebar from './components/Sidebar'
 
 function App() {
 	return (
 		<main>
-			<div className='sidebar'></div>			
+			<Sidebar/>			
 			<div className='preview'></div>			
 			<div className='code'></div>			
 		</main>

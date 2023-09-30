@@ -1,13 +1,14 @@
 import './App.css'
 import PreviewCard from './components/PreviewCard'
 import Sidebar from './components/Sidebar'
+import CodeBlock from './components/codeBlock'
 
 function App() {
 	return (
 		<main>
 			<Sidebar />			
 			<PreviewCard />			
-			<div className='code'></div>			
+			<CodeBlock />		
 		</main>
 	)
 }

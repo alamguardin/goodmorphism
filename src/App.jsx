@@ -1,11 +1,12 @@
 import './App.css'
+import PreviewCard from './components/PreviewCard'
 import Sidebar from './components/Sidebar'
 
 function App() {
 	return (
 		<main>
-			<Sidebar/>			
-			<div className='preview'></div>			
+			<Sidebar />			
+			<PreviewCard />			
 			<div className='code'></div>			
 		</main>
 	)

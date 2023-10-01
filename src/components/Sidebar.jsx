@@ -1,13 +1,4 @@
-import { useState } from "react"
-
-function Sidebar() {
-    const [	properties, setProperties] = useState({
-		background: '#212A3E',
-		blur: 16,
-		opacity: 15,
-		saturation: 120
-
-	})
+function Sidebar({ properties, addProperties} ) {
 
     const handleChange = (e) => {
         let newProperties = {...properties}
@@ -22,7 +13,7 @@ function Sidebar() {
             newProperties.saturation = e.target.value
         }
 
-        setProperties(newProperties)
+        addProperties(newProperties)
     }
 
     return (

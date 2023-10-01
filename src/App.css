@@ -49,11 +49,6 @@ main {
     gap: 20px;
 }
 
-.sidebar, .preview, .code {
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px ridge rgba(0, 0, 0, 0.6);
-}
-
 .sidebar {
     grid-area: 1/1/4/1;
 }
@@ -218,4 +213,70 @@ main {
     display: inline-block;
     font-size: 0.875em;
     margin-top: 1.25rem;
+}
+
+/* Code block styles */
+.code, pre, code {
+    background: var(--black) !important;
+}
+
+.code {
+    position: relative;
+    max-width: 600px;
+    width: 600px;
+    margin: auto;
+    border-radius: 0.625em;
+}
+
+.code__button {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25em;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--black);
+    border-radius: 0.3125rem;
+    border: 1px solid transparent;
+    outline: none;
+    cursor: pointer;
+    transition: .2s all ease;
+}
+
+.code__button svg {
+    fill: var(--white);
+}
+
+.code__button:hover {
+    background: var(--blue-gray);
+    animation-name: checkCopy;
+    animation-duration: 0.6s;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+}
+
+.code__button:active {
+    transform: scale(0.9);
+}
+
+@keyframes checkCopy {
+    0% {
+        border-top: 1px solid var(--blue);
+    }
+
+    30% {
+        border-right: 1px solid var(--blue);
+    }
+
+    70% {
+        border-bottom: 1px solid var(--blue);
+    }
+
+    100% {
+        border-left: 1px solid var(--blue);
+    }
 }

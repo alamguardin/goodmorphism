@@ -177,3 +177,45 @@ main {
     color: var(--blue);
     text-decoration: none;
 }
+
+/* Preview styles */
+.preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card styles */
+.card {
+    max-width: 300px;
+    padding: 1.25em;
+    background: rgba(5, 12, 55, 0.15);
+    border-radius: 0.625em;
+    text-align: center;
+}
+
+.card__picture {
+    max-width: 120px;
+    margin: auto;
+}
+
+.card__title, .card__description, .card__link {
+    font-family: var(--font-title);
+    color: var(--white);
+}
+
+.card__title {
+    font-size: 1.125em;
+    font-weight: normal;
+    margin: 0.9375rem 0;
+}
+
+.card__description {
+    font-size: 0.75em;
+}
+
+.card__link {
+    display: inline-block;
+    font-size: 0.875em;
+    margin-top: 1.25rem;
+}

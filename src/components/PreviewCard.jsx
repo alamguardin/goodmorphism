@@ -5,14 +5,14 @@ function PreviewCard() {
         <div className="preview">
             <div className="card">
                 <header className="card__heading">
-                    <figure>
+                    <figure className='card__picture'>
                         <img src={imageCard} alt="" />
                     </figure>
                 </header>
                 <div className="card__content">
                     <h2 className="card__title">The Property of Corresponding Survey</h2>
                     <p className="card__description">Besides, the optimization of the arguments and claims is recognized by The Record of Alternative Expertise </p>
-                    <a href="#">View More</a>
+                    <a href="#" className='card__link'>View More</a>
                 </div>
             </div>
         </div>

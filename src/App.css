@@ -30,11 +30,21 @@ body {
     font-size: 16px;
 }
 
+img {
+    max-width: 100%;
+}
+
+input, button {
+    outline: none;
+}
+
+/* Layout styles */
 main {
+    padding: 1.25em;
     width: 100%;
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 250px 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
 }
@@ -54,4 +64,116 @@ main {
 
 .code {
     grid-area: 3/2/4/4;
+}
+
+/* Sidebar styles */
+.sidebar {
+    padding: 1.25em;
+    background: var(--black);
+    border-radius: 0.625em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar__title {
+    font-family: var(--font-title);
+    font-weight: normal;
+    font-size: 1.125em;
+    text-align: center;
+    color: var(--white);
+}
+
+.sidebar__tools {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+}
+
+.sidebar__label {
+    display: inline-block;
+    margin-bottom: 0.625rem;
+    font-size: 0.75em;
+    color: var(--white);
+}
+
+.sidebar__group {
+    display: flex;
+    align-items: center;
+    gap: 0.625em;
+}
+
+/* Input color styles */
+.sidebar__color {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width: 36px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar__color::-webkit-color-swatch {
+    border-radius: 50%;
+    border: 1px solid var(--blue-gray);
+}
+
+.sidebar__color::-moz-color-swatch {
+    border-radius: 50%;
+    border: 1px solid var(--blue-gray);
+}
+
+/* Input text color styles */
+.sidebar__input-color {
+    max-width: 100px;
+    padding: 8px 10px;
+    background: var(--blue-gray);
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    font-size: 0.75em;
+    color: var(--white);
+    transition: .2s all ease;
+}
+
+.sidebar__input-color:focus {
+    border: 1px solid var(--blue);
+}
+
+/* Input range styles */
+.sidebar__slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 200px;
+    height: 4px;
+    accent-color: var(--blue);
+    background: var(--blue-gray);
+    border-radius: 0.3125em;
+}
+
+/* Input text slider */
+.sidebar__input {
+    width: 40px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid transparent;
+    font-size: 0.75em;
+    color: var(--white);
+    transition: .2s all ease;
+}
+
+.sidebar__input:focus {
+    border-bottom: 1px solid var(--blue);
+}
+
+.sidebar__author {
+    font-size: 0.75em;
+    color: var(--white);
+    text-align: center;
+}
+
+.sidebar__author a {
+    color: var(--blue);
+    text-decoration: none;
 }

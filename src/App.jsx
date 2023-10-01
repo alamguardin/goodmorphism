@@ -6,9 +6,9 @@ import CodeBlock from './components/codeBlock'
 function App() {
 	return (
 		<main>
-			<Sidebar />			
-			<PreviewCard />			
-			<CodeBlock />		
+			<Sidebar />
+			<PreviewCard />
+			<CodeBlock />
 		</main>
 	)
 }

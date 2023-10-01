@@ -8,29 +8,29 @@ function Sidebar() {
                 <div className="sidebar__tool">
                     <label htmlFor="" className="sidebar__label">Background</label>
                     <div className="sidebar__group">
-                        <input type="color" />
-                        <input type="text" />
+                        <input type="color" className="sidebar__color"/>
+                        <input type="text" className="sidebar__input-color"/>
                     </div>
                 </div>
                 <div className="sidebar__tool">
                     <label htmlFor="" className="sidebar__label">Blur</label>
                     <div className="sidebar__group">
-                        <input type="range" />
-                        <input type="text" />
+                        <input type="range" className="sidebar__slider"/>
+                        <input type="text" className="sidebar__input"/>
                     </div>
                 </div>
                 <div className="sidebar__tool">
                     <label htmlFor="" className="sidebar__label">Opacity</label>
                     <div className="sidebar__group">
-                        <input type="range" />
-                        <input type="text" />
+                        <input type="range" className="sidebar__slider"/>
+                        <input type="text" className="sidebar__input"/>
                     </div>
                 </div>
                 <div className="sidebar__tool">
                     <label htmlFor="" className="sidebar__label">Saturation</label>
                     <div className="sidebar__group">
-                        <input type="range" />
-                        <input type="text" />
+                        <input type="range" className="sidebar__slider"/>
+                        <input type="text" className="sidebar__input"/>
                     </div>
                 </div>
             </div>

@@ -185,6 +185,7 @@ main {
     max-width: 300px;
     padding: 1.25em;
     background: rgba(5, 12, 55, 0.15);
+    backdrop-filter: blur(16px) saturate(120%);
     border-radius: 0.625em;
     text-align: center;
 }

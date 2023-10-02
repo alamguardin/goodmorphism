@@ -21,7 +21,7 @@ function App() {
 		<main>
 			<Sidebar properties={properties} addProperties={addProperties}/>
 			<PreviewCard />
-			<CodeBlock />
+			<CodeBlock properties={properties}/>
 		</main>
 	)
 }

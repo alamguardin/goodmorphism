@@ -20,7 +20,7 @@ function App() {
 	return (
 		<main>
 			<Sidebar properties={properties} addProperties={addProperties}/>
-			<PreviewCard />
+			<PreviewCard properties={properties}/>
 			<CodeBlock properties={properties}/>
 		</main>
 	)

@@ -1,23 +1,15 @@
-import { useEffect, useRef } from 'react'
 import imageCard from '../assets/3d-blocks.png'
 import hexToRgba from '../services/hexToRgba'
 
 function PreviewCard({ properties }) {
-    const styles = useRef({
+    const styles = {
         background: hexToRgba(properties.background, properties.opacity / 100),
         backdropFilter: `blur(${properties.blur}px) saturate(${properties.saturation}%)`
-    })
-
-    useEffect(() => {
-        styles.current = {
-            background: hexToRgba(properties.background, properties.opacity / 100),
-            backdropFilter: `blur(${properties.blur}px) saturate(${properties.saturation}%)`
-        }
-    }, [properties])
+    }
 
     return (
         <div className="preview">
-            <div className="card" style={styles.current}>
+            <div className="card" style={styles}>
                 <header className="card__heading">
                     <figure className='card__picture'>
                         <img src={imageCard} alt="" />

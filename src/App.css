@@ -125,22 +125,26 @@ main {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    width: 34px;
-    height: 34px;
-    background-color: transparent;
+    width: 2.125rem;
+    height: 2.125rem;
+    background: none;
     border: none;
     cursor: pointer;
     overflow: hidden;
 }
 
+.sidebar__color::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
 .sidebar__color::-webkit-color-swatch {
-    border-radius: 50%;
-    border: 2px solid var(--secundary-text);
+    border-radius: 0.625rem;
+    border: 2px solid var(--divider);
 }
 
 .sidebar__color::-moz-color-swatch {
-    border-radius: 50%;
-    border: 1px solid var(--blue-gray);
+    border-radius: 0.625rem;
+    border: 1px solid var(--divider);
 }
 
 /* Input text color styles */

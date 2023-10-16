@@ -231,11 +231,9 @@ main {
 }
 
 /* Code block styles */
-.code, pre, code {
-    background: var(--black) !important;
-}
-
 .code {
+    padding: 1.25rem;
+    background: var(--background);
     position: relative;
     max-width: 600px;
     width: 600px;
@@ -243,55 +241,31 @@ main {
     border-radius: 0.625em;
 }
 
+.code code {
+    color: var(--primary-text);
+}
+
 .code__button {
     position: absolute;
     top: 1.25rem;
     right: 1.25em;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--black);
+    background: none;
+    border: none;
     border-radius: 0.3125rem;
-    border: 1px solid transparent;
     outline: none;
     cursor: pointer;
     transition: .2s all ease;
 }
 
 .code__button svg {
-    fill: var(--white);
+    fill: var(--secundary-text);
+    transition: .2s all ease;
 }
 
-.code__button:hover {
-    background: var(--blue-gray);
-    animation-name: checkCopy;
-    animation-duration: 0.6s;
-    animation-direction: alternate;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
-    animation-fill-mode: none;
+.code__button:hover svg {
+    fill: var(--primary-text);
 }
 
 .code__button:active {
     transform: scale(0.9);
-}
-
-@keyframes checkCopy {
-    0% {
-        border-top: 1px solid var(--blue);
-    }
-
-    30% {
-        border-right: 1px solid var(--blue);
-    }
-
-    70% {
-        border-bottom: 1px solid var(--blue);
-    }
-
-    100% {
-        border-left: 1px solid var(--blue);
-    }
 }

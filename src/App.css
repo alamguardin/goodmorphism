@@ -50,11 +50,11 @@ input, button {
 main {
     padding: 1.25em;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-columns: 280px 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .sidebar {
@@ -381,4 +381,48 @@ main {
 
 .code__button:active {
     transform: scale(0.9);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+    main {
+        padding: unset;
+        width: 90%;
+        margin: 2.5rem auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar {
+        gap: 20px;
+    }
+
+    .sidebar__tools {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .preview {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card:nth-child(1),
+    .card:nth-child(2),
+    .card:nth-child(3),
+    .card:nth-child(4),
+    .card:nth-child(5) {
+        max-width: 300px;
+    }
+
+    .code {
+        width: 100%;
+    }
+
+    .code pre {
+        overflow-x: auto;
+    }
 }

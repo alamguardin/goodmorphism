@@ -1,14 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Sora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&family=Sora&display=swap');
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}details,main{display:block}h1{font-size:2em;margin: 0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{appearance:button;-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{appearance:textfield;-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
 
 :root {
     /* Pallete Colors */
-    --black: #212A3E;
-    --white: #F1F6F9;
-    --blue-gray: #394867;
+    --black: #1E293B;
+    --white: #FFFFFF;
+    --blue-gray: #617390;
     --blue: #2DCDDF;
+
+    --background: #1E293B;
+    --primary-text: #FFFFFF;
+    --secundary-text: #617390;
+    --divider: #0F172A;
+    --accent: #7477FF;
 
     /* Fonts */
     --font-title: 'Sora', sans-serif;
@@ -23,8 +29,10 @@ button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=
 }
 
 body {
-    background: url('https://products.ls.graphics/mesh-gradients/images/31.-Portage.jpg');
+    background: url('/public/bg-purple-app.jpg');
+    background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     font-family: var(--font-body);
     font-size: 16px;
@@ -44,7 +52,7 @@ main {
     width: 100%;
     height: 100vh;
     display: grid;
-    grid-template-columns: 250px 1fr 1fr;
+    grid-template-columns: 280px 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
 }
@@ -71,31 +79,45 @@ main {
     justify-content: space-between;
 }
 
+.sidebar__heading {
+    display: flex;
+    align-items: center;
+    gap: 0.9375rem;
+}
+
+.sidebar__brand {
+    max-width: 2rem;
+}
+
 .sidebar__title {
     font-family: var(--font-title);
     font-weight: normal;
-    font-size: 1.125em;
-    text-align: center;
+    font-size: 1rem;
     color: var(--white);
 }
 
 .sidebar__tools {
     display: flex;
     flex-direction: column;
-    gap: 1.25em;
+    gap: 2.5rem;
 }
 
 .sidebar__label {
     display: inline-block;
     margin-bottom: 0.625rem;
     font-size: 0.75em;
-    color: var(--white);
+    color: var(--secundary-text);
 }
 
 .sidebar__group {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 0.625em;
+}
+
+.sidebar__tool:first-child .sidebar__group {
+    justify-content: flex-start;
 }
 
 /* Input color styles */
@@ -103,16 +125,17 @@ main {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    width: 34px;
+    height: 34px;
     background-color: transparent;
-    width: 36px;
-    height: 36px;
     border: none;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .sidebar__color::-webkit-color-swatch {
     border-radius: 50%;
-    border: 1px solid var(--blue-gray);
+    border: 2px solid var(--secundary-text);
 }
 
 .sidebar__color::-moz-color-swatch {
@@ -124,7 +147,7 @@ main {
 .sidebar__input-color {
     max-width: 100px;
     padding: 8px 10px;
-    background: var(--blue-gray);
+    background: var(--divider);
     border: 1px solid transparent;
     border-radius: 0.5rem;
     font-size: 0.75em;
@@ -140,37 +163,28 @@ main {
 .sidebar__slider {
     -webkit-appearance: none;
     appearance: none;
-    width: 200px;
+    width: 150px;
     height: 4px;
-    accent-color: var(--blue);
-    background: var(--blue-gray);
+    accent-color: var(--accent);
+    background: var(--divider);
     border-radius: 0.3125em;
 }
 
 /* Input text slider */
-.sidebar__input {
-    width: 40px;
-    background: none;
-    border: none;
-    border-bottom: 1px solid transparent;
-    font-size: 0.75em;
+.sidebar__value {
+    font-size: 0.75rem;
     color: var(--white);
     transition: .2s all ease;
 }
 
-.sidebar__input:focus {
-    border-bottom: 1px solid var(--blue);
-}
-
 .sidebar__author {
-    font-size: 0.75em;
+    font-size: 0.75rem;
     color: var(--white);
     text-align: center;
 }
 
 .sidebar__author a {
-    color: var(--blue);
-    text-decoration: none;
+    color: var(--primary-text);
 }
 
 /* Preview styles */

@@ -3,6 +3,7 @@ import PreviewCard from './components/PreviewCard'
 import Sidebar from './components/Sidebar'
 import CodeBlock from './components/CodeBlock'
 import { useState } from 'react'
+import { useCallback } from 'react'
 
 function App() {
 	const [	properties, setProperties] = useState({
@@ -13,9 +14,9 @@ function App() {
 
 	})
 
-	const addProperties = (newProperties) => {
-		setProperties(newProperties)
-	}
+	const addProperties = useCallback((properties) => {
+		setProperties(properties)
+	}, [])
 
 	return (
 		<main>

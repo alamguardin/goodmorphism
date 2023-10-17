@@ -5,11 +5,6 @@ button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=
 
 :root {
     /* Pallete Colors */
-    --black: #1E293B;
-    --white: #FFFFFF;
-    --blue-gray: #617390;
-    --blue: #2DCDDF;
-
     --background: #1E293B;
     --primary-text: #FFFFFF;
     --secundary-text: #617390;
@@ -29,7 +24,7 @@ button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=
 }
 
 body {
-    background: url('/public/bg-purple-app.jpg');
+    background: url('/bg-purple-app.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -72,7 +67,7 @@ main {
 /* Sidebar styles */
 .sidebar {
     padding: 1.25em;
-    background: var(--black);
+    background: var(--background);
     border-radius: 0.625em;
     display: flex;
     flex-direction: column;
@@ -93,7 +88,7 @@ main {
     font-family: var(--font-title);
     font-weight: normal;
     font-size: 1rem;
-    color: var(--white);
+    color: var(--primary-text);
 }
 
 .sidebar__tools {
@@ -155,7 +150,7 @@ main {
     border: 1px solid transparent;
     border-radius: 0.5rem;
     font-size: 0.75em;
-    color: var(--white);
+    color: var(--primary-text);
     transition: .2s all ease;
 }
 
@@ -177,13 +172,13 @@ main {
 /* Input text slider */
 .sidebar__value {
     font-size: 0.75rem;
-    color: var(--white);
+    color: var(--primary-text);
     transition: .2s all ease;
 }
 
 .sidebar__author {
     font-size: 0.75rem;
-    color: var(--white);
+    color: var(--primary-text);
     text-align: center;
 }
 

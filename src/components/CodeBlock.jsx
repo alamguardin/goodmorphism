@@ -1,13 +1,16 @@
+import { Toaster, toast } from 'sonner'
 import strCodeGenerator from '../services/strCodeGenerator';
 
 function CodeBlock({ properties }) {
 
     const handleClick = () => {
         navigator.clipboard.writeText(strCodeGenerator(properties))
+        toast.success('Copied successfully')
     }
 
     return (
         <div className="code">
+            <Toaster richColors></Toaster>
             <pre>
                 <code>
                     {strCodeGenerator(properties)}

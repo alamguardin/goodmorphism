@@ -46,7 +46,7 @@ function Sidebar({ properties, addProperties} ) {
                 </div>
             </div>
             <footer className="sidebar__footer">
-                <p className="sidebar__author">Made with ❤️ by <a href="#">@alamguardin</a></p>
+                <p className="sidebar__author">Made with ❤️ by <a href="https://github.com/alamguardin">@alamguardin</a></p>
             </footer>
         </div>
     )

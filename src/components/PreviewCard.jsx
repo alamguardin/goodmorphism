@@ -1,4 +1,3 @@
-import imageCard from '../assets/3d-blocks.png'
 import hexToRgba from '../services/hexToRgba'
 
 function PreviewCard({ properties }) {
@@ -8,18 +7,51 @@ function PreviewCard({ properties }) {
     }
 
     return (
-        <div className="preview">
-            <div className="card" style={styles}>
-                <header className="card__heading">
-                    <figure className='card__picture'>
-                        <img src={imageCard} alt="" />
-                    </figure>
-                </header>
-                <div className="card__content">
-                    <h2 className="card__title">The Property of Corresponding Survey</h2>
-                    <p className="card__description">Besides, the optimization of the arguments and claims is recognized by The Record of Alternative Expertise </p>
-                    <a href="#" className='card__link'>View More</a>
-                </div>
+        <div className='preview'>
+            {/* User card */}
+            <div className='card' style={styles}>
+                <figure className='card__user'>
+                    <img src="/img-user.jpg" alt="Alex" />
+                </figure>
+                <h3 className='card__title'>Jaime Sander</h3>
+                <p className='card__legend'>Freelancer</p>
+            </div>
+            {/* Mini sidebar */}
+            <div className='card' style={styles}>
+                <a href="" className='card__icon'><i className="ri-home-line"></i></a>
+                <a href="" className='card__icon'><i className="ri-bookmark-line"></i></a>
+                <a href="" className='card__icon'><i className="ri-settings-line"></i></a>
+                <a href="" className='card__icon'><i className="ri-user-line"></i></a>
+            </div>
+            {/* Popup */}
+            <div className='card' style={styles}>
+                <button className='card__button'>
+                    <i className='ri-google-fill'></i>
+                    <span>Sign in with google</span>
+                </button>
+                <p className='card__description'>By click login you agree to our Terms of Service and Privacy Policy</p>
+            </div>
+            {/* Input */}
+            <div className='card' style={styles}>
+                <i className='ri-search-2-line'></i>
+                <input type="text" className='card__input' placeholder='Type something'/>
+            </div>
+            {/* Navbar */}
+            <div className='card' style={styles}>
+                <ul className='card__list'>
+                    <li className='card__item active'>
+                        <i className='ri-home-line'></i>
+                        <span>Home</span>
+                    </li>
+                    <li className='card__item'>
+                        <i className='ri-service-line'></i>
+                        <span>Services</span>
+                    </li>
+                    <li className='card__item'>
+                        <i className='ri-phone-line'></i>
+                        <span>Contact</span>
+                    </li>
+                </ul>
             </div>
         </div>
     )

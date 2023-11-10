@@ -1,8 +1,15 @@
-# React + Vite
+# Goodmorphism
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Goodmorphism Screenshot](/public/goodmorphism-shot.png)
 
-Currently, two official plugins are available:
+_Create beautiful glass morphisms with CSS 💎 (https://www.goodmorphism.xyz/)_
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Goodmorphism is a CSS Generator that allows you to easily create glass morphisms tailored to your needs. Once you have configured everything to your liking, you just have to copy the generated code and apply it to your design.
+
+## Technologies
+
+The following technologies were implemented for this project:
+
+- Vite - As a bundler
+- Css - For a design without libraries or frameworks
+- React - As a development library
